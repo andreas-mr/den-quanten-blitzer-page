@@ -1,0 +1,202 @@
+$prefix:                      bs-;
+
+$navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), .4);
+$navbar-light-hover-color:          rgba(var(--#{$prefix}emphasis-color-rgb), .8);
+$navbar-light-active-color:         rgba(var(--#{$prefix}emphasis-color-rgb), 1);
+$navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .5);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: open-sans;
+    src: url("../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+    font-family: shantell-sans;
+    src: url("../fonts/Shantell_Sans/ShantellSans-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf");
+}
+
+@font-face {
+    font-family: caveat;
+    src: url("../fonts/Caveat/Caveat-VariableFont_wght.ttf");
+}
+
+@mixin default-font-family {
+    font-family: open-sans;
+}
+
+.default-font-family {
+    @include default-font-family();
+}
+
+@mixin primary-font-family {
+    font-family: shantell-sans;
+}
+
+.primary-font-family {
+    @include primary-font-family();
+}
+
+@mixin secondary-font-family {
+    font-family: caveat;
+}
+
+.secondary-font-family {
+    @include secondary-font-family();
+}
+
+@mixin header-style {
+    @extend .h1;
+    @extend .shadow-sm;
+    margin-bottom: 25px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--bs-dark);
+    border-bottom-width: 1px;
+}
+
+.invert-color {
+    filter: invert(100%);
+}
+
+h1, .h1 {
+    @include secondary-font-family();
+    font-stretch: condensed;
+    font-weight: 900;
+    font-size: 2.75em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h2, .h2 {
+    @include default-font-family();
+    font-stretch: extra-condensed;
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3, .h3 {
+    @include default-font-family();
+    font-stretch: extra-condensed;
+    font-weight: 800;
+    font-size: 1.25em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h4, .h4 {
+    @include default-font-family();
+    font-stretch: condensed;
+    font-weight: 800;
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h5, .h5 {
+    @include default-font-family();
+    font-weight: 800;
+    font-size: 1.0em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h6, .h6 {
+    @include default-font-family();
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline
+}
+
+body {
+    @include default-font-family();
+    font-size: 1em;
+    background-color: var(--bs-dark);
+    background-image: url("../img/background/background.jpg");
+    background-attachment: fixed;
+    background-repeat: round;
+}
+
+nav, main, footer {
+    border-style: solid;
+    border-color: var(--bs-dark);
+    border-width: 0px 2px;
+}
+
+nav {
+    border-width: 0px 2px 4px 2px;
+
+    .navbar-collapse {
+        ul.navbar-nav {
+            @include primary-font-family();
+            color: var(--bs-dark);
+            font-size: 1.4em;
+
+            li.nav-item {
+                text-align: center;
+                padding: 0px 9px;
+
+                a.nav-link {
+                    font-weight: 300;
+                }
+                a.nav-link:hover {
+                    font-weight: 500;
+                }
+                a.nav-link.active {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+main {
+    min-height: 50vh;
+
+    header {
+        @include header-style();
+    }
+
+    article {
+        header {
+            @include header-style();
+        }
+    }
+}
+
+footer {
+    @include default-font-family();
+    font-size: 0.9em;
+
+    #footer-container {
+        max-width: 700px;
+    }
+
+    address {
+        font-weight: 600;
+        font-stretch: condensed;
+        font-size: 1.0em;
+    }
+
+    #footer-nav {
+        width: 200px;
+    }
+
+    .nav {
+        font-stretch: condensed;
+        font-weight: 500;
+        font-size: 1.0em;
+
+        .nav-item {
+            border-width: 1px 0px;
+            border-collapse: separate;
+            border-color: var(--bs-light);
+            border-style: solid;
+            margin-top: -1px;
+        }
+    }
+}
