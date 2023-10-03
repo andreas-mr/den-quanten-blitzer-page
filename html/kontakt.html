@@ -1,27 +1,19 @@
-<header>Kontaktformular</header>
-<form action="#" method="post">
-    <script src="/script/form-validation.js"></script>
-    <h2>Kontaktinformationen</h2>
-    <div class="row">
-        <div class="col-lg mt-3 mb-3">
-            <div class="form-floating was-validated">
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name" onchange="this.value = this.value.trim();" required>
-                <label for="name" class="form-label required">Name <i>*</i></label>
-            </div>
-        </div>
-    </div>
-    <div class="row row-cols-lg-2">
-        <div class="col-lg mt-3 mb-3">
-            <div class="form-floating was-validated ">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Bitte E-Mailadresse eingeben." onchange="this.value = this.value.replace(/[\s]/g, '');" required>
-                <label for="email" class="form-label">E-Mail</label>
-            </div>
-        </div>
-        <div class="col-lg mt-3 mb-3">
-            <div class="form-floating">
-                <input type="tel" autocomplete="tel" class="form-control" name="whatsapp" id="whatsapp" placeholder="Mobil / Whatsapp" oninput="validateMobilePhoneNumber(this);">
-                <label for="whatsapp" class="form-label">Mobil / WhatsApp</label>
-            </div>
-        </div>
-    </div>
-</form>
+<header>Kontakt</header>
+<table>
+    <tr>
+        <td><i class="bi-envelope-at fs-1"></i></td>
+        <td><b>E-Mail:</b></td>
+        <td><a href="mailto:kontakt@den-quanten-blitzer.de">kontakt@den-quanten-blitzer.de</a></td>
+    </tr>
+    <tr>
+        <td><i class="bi-telephone fs-1"></i></td>
+        <td><b>Telefon:</b></td>
+        <td>+49 1516 2710057</a></td>
+    </tr>
+    <tr>
+        <td><i class="bi-whatsapp fs-1"></i></td>
+        <td><b>WhatsApp:</b></td>
+        <td>+49 1516 2710057</a></td>
+    </tr>
+</table>
+  
