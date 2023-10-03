@@ -47,7 +47,7 @@ $navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .5
 }
 
 @mixin header-style {
-    @extend .h1;
+    @extend h1;
     @extend .shadow-sm;
     margin-bottom: 25px;
     border-bottom-style: solid;
@@ -59,57 +59,81 @@ $navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .5
     filter: invert(100%);
 }
 
-h1, .h1 {
+.h1 {
     @include secondary-font-family();
     font-stretch: condensed;
     font-weight: 900;
     font-size: 2.75em;
+}
+
+h1 {
+    @extend .h1;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-h2, .h2 {
+.h2 {
     @include default-font-family();
     font-stretch: extra-condensed;
     font-weight: 800;
     font-size: 1.5em;
+}
+
+h2 {
+    @extend .h2;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-h3, .h3 {
+.h3 {
     @include default-font-family();
     font-stretch: extra-condensed;
     font-weight: 800;
     font-size: 1.25em;
+}
+
+h3 {
+    @extend .h3;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-h4, .h4 {
+.h4 {
     @include default-font-family();
     font-stretch: condensed;
     font-weight: 800;
-    font-size: 1.1em;
+    font-size: 1.1em;   
+}
+
+h4 {
+    @extend .h4;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-h5, .h5 {
+.h5 {
     @include default-font-family();
     font-weight: 800;
     font-size: 1.0em;
+}
+
+h5 {
+    @extend .h5;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-h6, .h6 {
+.h6 {
     @include default-font-family();
     font-weight: 600;
     font-size: 1em;
+    text-decoration: underline
+}
+
+h6 {
+    @extend .h6;
     margin-top: 20px;
     margin-bottom: 10px;
-    text-decoration: underline
 }
 
 body {
